@@ -128,6 +128,7 @@
   font-weight: 600;
 
   transition: all 0.3s;
+  user-select: none;
 
   &:hover {
     transform: translateY(-5px);

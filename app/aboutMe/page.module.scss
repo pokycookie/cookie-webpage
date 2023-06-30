@@ -3,6 +3,17 @@
 .aboutMe {
   padding: 40px;
   min-width: 500px;
+
+  * {
+    &::-moz-selection {
+      background-color: color.$white;
+      color: color.$black;
+    }
+    &::selection {
+      background-color: color.$white;
+      color: color.$black;
+    }
+  }
 }
 
 .introduceArea {

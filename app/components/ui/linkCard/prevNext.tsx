@@ -17,12 +17,21 @@ export default function PrevNext(props: IProps) {
   return (
     <div className={styles.linkArea}>
       <Link href={props.prevHref}>
-        <FontAwesomeIcon className={styles.icon} icon={faCircleChevronLeft} />
-        <p>{props.prevTitle}</p>
+        <p className={styles.subtitle}>PREV</p>
+        <span>
+          <FontAwesomeIcon className={styles.icon} icon={faCircleChevronLeft} />
+          <p>{props.prevTitle}</p>
+        </span>
       </Link>
       <Link href={props.nextHref}>
-        <p>{props.nextTitle}</p>
-        <FontAwesomeIcon className={styles.icon} icon={faCircleChevronRight} />
+        <p className={styles.subtitle}>NEXT</p>
+        <span>
+          <p>{props.nextTitle}</p>
+          <FontAwesomeIcon
+            className={styles.icon}
+            icon={faCircleChevronRight}
+          />
+        </span>
       </Link>
     </div>
   )

@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main className={styles.home}>
-      <section className={styles.main}>
+      <article className={styles.main}>
         <div className={styles.titleArea}>
           <h1>Front-End</h1>
           <h1>Developer</h1>
@@ -34,7 +34,7 @@ export default function Home() {
             About Me
           </Link>
         </div>
-      </section>
+      </article>
       <div className={styles.marqueeArea}>
         <Marquee>COOKIE</Marquee>
         <Marquee delay={3}>COOKIE</Marquee>

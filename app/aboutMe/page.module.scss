@@ -1,0 +1,52 @@
+@use '@styles/color';
+
+.aboutMe {
+  padding: 40px;
+  min-width: 500px;
+
+  * {
+    &::-moz-selection {
+      background-color: color.$white;
+      color: color.$black;
+    }
+    &::selection {
+      background-color: color.$white;
+      color: color.$black;
+    }
+  }
+}
+
+.introduceArea {
+  max-width: 800px;
+  font-size: min(max(1.8vw, 14px), 19px);
+  font-weight: 300;
+  line-height: 30px;
+  padding: 20px;
+  margin-top: 200px;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    white-space: nowrap;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+}
+
+.marqueeArea1 {
+  position: absolute;
+  top: 100px;
+  left: -50px;
+  z-index: -1;
+  transform: rotate(10deg);
+}
+
+.marqueeArea2 {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  z-index: -1;
+}

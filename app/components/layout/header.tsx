@@ -51,4 +51,5 @@ const links = [
   { title: 'About Me', href: '/aboutMe', regex: /^\/aboutMe/ },
   { title: 'Skills', href: '/skills', regex: /^\/skills/ },
   { title: 'Portfolio', href: '/portfolio', regex: /^\/portfolio/ },
+  { title: 'Contact', href: '/contact', regex: /^\/contact/ },
 ]

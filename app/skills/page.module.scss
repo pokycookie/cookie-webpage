@@ -1,10 +1,21 @@
+@use '@styles/color';
+
 .skills {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
-  height: 5000px;
+  * {
+    &::-moz-selection {
+      background-color: color.$white;
+      color: color.$black;
+    }
+    &::selection {
+      background-color: color.$white;
+      color: color.$black;
+    }
+  }
 }
 
 .bubbleArea {
@@ -16,11 +27,10 @@
   align-items: center;
 }
 
-.wrapper {
+.article {
   width: 100%;
   max-width: 1200px;
-  aspect-ratio: 3 / 2;
-  position: relative;
+  margin-top: 100px;
 }
 
 .marqueeArea {

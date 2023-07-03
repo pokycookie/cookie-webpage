@@ -4,19 +4,21 @@ import PrevNext from '@/components/ui/linkCard/prevNext'
 
 export default function aboutMe() {
   return (
-    <main className={styles.aboutMe}>
-      <article className={styles.introduceArea}>
-        <h2>About Cookie</h2>
-        {introduce.map((text, i) => {
-          return <p key={i}>{text}</p>
-        })}
-      </article>
-      <PrevNext
-        prevTitle="Home"
-        prevHref="/"
-        nextTitle="Skills"
-        nextHref="/skills"
-      />
+    <>
+      <main className={styles.aboutMe}>
+        <article className={styles.introduceArea}>
+          <h2>About Cookie</h2>
+          {introduce.map((text, i) => {
+            return <p key={i}>{text}</p>
+          })}
+        </article>
+        <PrevNext
+          prevTitle="Home"
+          prevHref="/"
+          nextTitle="Skills"
+          nextHref="/skills"
+        />
+      </main>
       <div className={styles.marqueeArea1}>
         <Marquee>COOKIE</Marquee>
         <Marquee delay={3}>COOKIE</Marquee>
@@ -24,7 +26,7 @@ export default function aboutMe() {
       <div className={styles.marqueeArea2}>
         <Marquee>COOKIE</Marquee>
       </div>
-    </main>
+    </>
   )
 }
 

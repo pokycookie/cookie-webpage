@@ -35,7 +35,9 @@ export default function GooeyArea(props: IProps) {
 }
 
 const Filter = styled.svg(() => ({
-  display: 'none',
+  position: 'absolute',
+  height: 0,
+  // display: 'none',
 }))
 
 const Area = styled.div(() => ({

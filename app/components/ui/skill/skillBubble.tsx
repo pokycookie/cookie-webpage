@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 'use client'
 
 import styled from '@emotion/styled'
@@ -12,27 +11,31 @@ interface IProps {
   y?: number | string
   size?: number
   color?: string
+  hash?: string
 }
 
 export default function SkillBubble(props: IProps) {
   return (
-    <Bubble
-      className={styles.bubble}
-      x={props.x}
-      y={props.y}
-      size={props.size}
-      color={props.color}
-      initial={{ x: '-50%', y: '-50%' }}
-      whileHover={{ scale: 1.1, x: '-50%', y: '-50%' }}
-    >
-      <Image
-        src={props.src}
-        alt="html"
-        placeholder="empty"
-        className={styles.img}
-        draggable="false"
-      />
-    </Bubble>
+    // next/Link 사용 시 `scroll behavior: smooth`가 동작하지 않는 문제가 있어 anchor 태그 사용
+    <a href={`#${props.hash}`}>
+      <Bubble
+        className={styles.bubble}
+        x={props.x}
+        y={props.y}
+        size={props.size}
+        color={props.color}
+        initial={{ x: '-50%', y: '-50%' }}
+        whileHover={{ scale: 1.1, x: '-50%', y: '-50%' }}
+      >
+        <Image
+          src={props.src}
+          alt="html"
+          placeholder="empty"
+          className={styles.img}
+          draggable="false"
+        />
+      </Bubble>
+    </a>
   )
 }
 

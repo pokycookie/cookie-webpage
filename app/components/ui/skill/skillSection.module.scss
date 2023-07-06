@@ -3,6 +3,11 @@
   padding: 30px;
   position: relative;
 
+  backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid #4e5454;
+  margin: 20px 0px;
+
   display: flex;
   gap: 40px;
 }

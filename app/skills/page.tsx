@@ -39,7 +39,11 @@ export default function Skills() {
 
   return (
     <main className={styles.skills}>
-      <div className={styles.marqueeArea}>
+      <div className={styles.marqueeArea1}>
+        <Marquee>COOKIE</Marquee>
+        <Marquee delay={3}>COOKIE</Marquee>
+      </div>
+      <div className={styles.marqueeArea2}>
         <Marquee>COOKIE</Marquee>
         <Marquee delay={3}>COOKIE</Marquee>
       </div>

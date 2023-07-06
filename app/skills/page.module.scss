@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding: 20px;
 
   * {
     &::-moz-selection {
@@ -33,9 +34,15 @@
   margin-top: 100px;
 }
 
-.marqueeArea {
+.marqueeArea1 {
   position: absolute;
   top: 50px;
   z-index: -1;
   transform: rotate(-5deg);
+}
+.marqueeArea2 {
+  position: absolute;
+  top: 90vh;
+  z-index: -1;
+  transform: rotate(2deg);
 }

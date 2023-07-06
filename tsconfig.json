@@ -22,7 +22,8 @@
     "baseUrl": "./app",
     "paths": {
       "@/*": ["./*"],
-      "@img/*": ["../public/img/*"]
+      "@img/*": ["../public/img/*"],
+      "@data/*": ["../public/data/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

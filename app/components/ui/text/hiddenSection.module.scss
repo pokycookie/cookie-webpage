@@ -1,0 +1,22 @@
+.hiddenSection {
+  .titleArea {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+
+    cursor: pointer;
+    margin-top: 15px;
+
+    h3 {
+      margin: 0;
+    }
+
+    .icon {
+    }
+  }
+
+  .content {
+    overflow: hidden;
+  }
+}

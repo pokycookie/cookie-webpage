@@ -1,0 +1,45 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  section {
+    width: 100%;
+    max-width: 1600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media screen and (min-width: 1000px) {
+      a:nth-child(odd) {
+        align-self: flex-start;
+      }
+      a:nth-child(even) {
+        align-self: flex-end;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      a {
+        align-self: center;
+      }
+    }
+  }
+}
+
+.marqueeArea1 {
+  position: absolute;
+  top: 150px;
+  left: -50px;
+  z-index: -1;
+  transform: rotate(5deg);
+}
+.marqueeArea2 {
+  position: absolute;
+  top: max(100vh, 700px);
+  left: -50px;
+  z-index: -1;
+  transform: rotate(-7deg);
+}

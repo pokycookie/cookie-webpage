@@ -1,0 +1,18 @@
+.badgeArea {
+  display: flex;
+  gap: 7px;
+  padding: 15px 5px;
+
+  .badge {
+    border-radius: 5px;
+    list-style: none;
+    padding: 7px 12px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    user-select: none;
+  }
+}

@@ -1,9 +1,11 @@
 import styles from './page.module.scss'
 import ProjectCard from '@/components/ui/projectCard/projectCard'
-import mapleMesiterThumb from '@img/projects/mapleMesiter/changeMenu.gif'
 import projectData from '@data/projects.json'
 import PrevNext from '@/components/ui/linkCard/prevNext'
 import Marquee from '@/components/ui/marquee/marquee'
+
+import mapleMesiterThumb from '@img/projects/maple-meister.gif'
+import whatToDoNowThumb from '@img/projects/what-to-do-now.gif'
 
 export default function Portfolio() {
   return (
@@ -15,7 +17,7 @@ export default function Portfolio() {
           href="/portfolio/mapleMesiter"
         />
         <ProjectCard
-          thumb={mapleMesiterThumb}
+          thumb={whatToDoNowThumb}
           info={projectData.WhatToDoNow}
           href="/portfolio/whatToDoNow"
         />

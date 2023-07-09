@@ -4,6 +4,7 @@ import ProjectLink from '@/components/ui/linkCard/projectLink'
 import styles from '../details.module.scss'
 import HiddenSection from '@/components/ui/text/hiddenSection'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const skills = projectData.mapleMesiter.skills
 
@@ -57,6 +58,7 @@ export default function MapleMeister() {
             alt="timer"
             width={800}
             height={450}
+            draggable={false}
           />
           <p>
             Maple Meister의 타이머는 무한타이머로 동작합니다. 반복할 시간을
@@ -69,6 +71,7 @@ export default function MapleMeister() {
             alt="chart"
             width={800}
             height={450}
+            draggable={false}
           />
           <p>
             차트 페이지에서는 여러 아이템들의 가격 추세를 원하는 시간대별로
@@ -86,6 +89,7 @@ export default function MapleMeister() {
             alt="recipe"
             width={800}
             height={450}
+            draggable={false}
           />
           <p>
             레시피 페이지에서는 현재 아이템들의 가격을 기준으로, 어떤 레시피
@@ -102,6 +106,7 @@ export default function MapleMeister() {
             alt="ledger"
             width={800}
             height={450}
+            draggable={false}
           />
           <p>
             거래 페이지를 이용하면 아이템을 구입하고 판매한 내역을 장부처럼
@@ -116,6 +121,7 @@ export default function MapleMeister() {
             alt="backup"
             width={800}
             height={450}
+            draggable={false}
           />
           <p>
             데이터 백업을 이용하여 현재 데이터를 파일로 변환시켜 저장할 수
@@ -128,6 +134,7 @@ export default function MapleMeister() {
             alt="restore"
             width={800}
             height={450}
+            draggable={false}
           />
           <p>
             데이터 백업을 통해 미리 파일의 형태로 변환해둔 데이터를 실제
@@ -140,68 +147,72 @@ export default function MapleMeister() {
         </section>
         <section>
           <h2>기술 스택</h2>
-          <h3>React & TypeScript</h3>
-          <p>
-            해당 프로젝트는 React와 TypeScript를 기반으로 제작된 웹
-            애플리케이션입니다. 웹 애플리케이션의 특성상 사용자가 조작하고,
-            페이지가 이에 반응해야 하는 경우가 많습니다. 따라서 가상 DOM을
-            사용하여 UI 업데이트를 최적화 할 수 있는 React를 선택하였습니다.
-          </p>
-          <p>
-            또한 기본 언어로는 JavaScript가 아닌 TypeScript를 선택하였습니다.
-            기존에 JavaScript로 개발을 진행하던 때에는 런타임 환경에서 예상하지
-            못하던 오류가 발생하는 경우가 많았습니다. 이러한 문제를 해결하고자
-            TypeScript를 선택했고, 그 결과 대부분의 에러들을 미리 파악하고
-            대비할 수 있게 되었습니다.
-          </p>
-          <p>
-            특히 indexedDB를 간편하게 사용하기 위해 이용한 Dexie라이브러리에서
-            공식적으로 TypeScript를 지원했기 때문에, 저장소에 저장된 데이터의
-            타입정보를 앱 내에서 쉽게 사용할 수 있다는 장점도 있었습니다.
-          </p>
-          <h3>Dexie</h3>
-          <p>
-            Dexie 라이브러리는 indexedDB API를 좀 더 편리하게 사용하기 위해
-            도입했습니다. 이 프로젝트는 사용자가 입력한 데이터들을 저장하고,
-            이를 나중에 불러와서 사용하기 때문에 자체적인 저장소 기능을 사용해야
-            했습니다.
-          </p>
-          <p>
-            LocalStorage의 경우 문자열만 저장할 수 있으며, 용량에도 제한이 있기
-            때문에 고려대상이 아니었습니다. 따라서 객체의 형태로 데이터를 저장할
-            수 있으며, 용량에도 제한이 없는 indexedDB를 사용하기로
-            마음먹었습니다.
-          </p>
-          <p>
-            프로젝트 초기에는 indexedDB를 Promise형태로 래핑한 자체적인
-            라이브러리를 제작하여 사용했습니다. 하지만 프로젝트의 규모가 점점
-            커짐에 따라 indexedDB를 전문적으로 구조화한 라이브러리의 필요성을
-            느끼게 되었고, 이에 맞는 라이브러리로 Dexie를 선택하게 되었습니다.
-          </p>
-          <p>
-            Dexie는 Promise형태로 저장소를 사용할 수 있기 때문에, 기존의
-            React환경에서 쉽게 사용할 수 있다고 판단했습니다. 또한 TypeScript를
-            지원하여 저장할 데이터의 타입을 미리 지정할 수 있으며, 자동으로
-            primary key를 제공하는 등의 기능이 제공되기 때문에 더욱 편리하게
-            사용할 수 있었습니다.
-          </p>
-          <h3>PWA</h3>
-          <p>
-            해당 애플리케이션은 서버와의 통신이 필요하지 않은 구조로
-            제작되었습니다. 즉, 인터넷에 연결되지 않은 상태에서도 해당
-            애플리케이션을 이용할 수 있어야 합니다.
-          </p>
-          <p>
-            하지만 웹 애플리케이션의 특성상 해당 웹 주소에 접속 하여 서버로부터
-            기본적인 애플리케이션의 데이터를 받아오는 과정이 필요했고, 이
-            단계에서 인터넷에 연결되어 있지 않으면 애플리케이션을 사용할 수
-            없었습니다.
-          </p>
-          <p>
-            PWA에 대해 조사를 하면서 기존에 자주 사용하던 Youtube Music과 같은
-            데스크탑 앱이 사실은 PWA로 제작되었다는 것을 알았고, 이번 프로젝트도
-            이와 마찬가지로 데스크탑 앱처럼 만들 수 있다는 것을 알았습니다.
-          </p>
+          <HiddenSection title="React & TypeScript" deafultOpen>
+            <p>
+              해당 프로젝트는 React와 TypeScript를 기반으로 제작된 웹
+              애플리케이션입니다. 웹 애플리케이션의 특성상 사용자가 조작하고,
+              페이지가 이에 반응해야 하는 경우가 많습니다. 따라서 가상 DOM을
+              사용하여 UI 업데이트를 최적화 할 수 있는 React를 선택하였습니다.
+            </p>
+            <p>
+              또한 기본 언어로는 JavaScript가 아닌 TypeScript를 선택하였습니다.
+              기존에 JavaScript로 개발을 진행하던 때에는 런타임 환경에서
+              예상하지 못하던 오류가 발생하는 경우가 많았습니다. 이러한 문제를
+              해결하고자 TypeScript를 선택했고, 그 결과 대부분의 에러들을 미리
+              파악하고 대비할 수 있게 되었습니다.
+            </p>
+            <p>
+              특히 indexedDB를 간편하게 사용하기 위해 이용한 Dexie라이브러리에서
+              공식적으로 TypeScript를 지원했기 때문에, 저장소에 저장된 데이터의
+              타입정보를 앱 내에서 쉽게 사용할 수 있다는 장점도 있었습니다.
+            </p>
+          </HiddenSection>
+          <HiddenSection title="Dexie" deafultOpen>
+            <p>
+              Dexie 라이브러리는 indexedDB API를 좀 더 편리하게 사용하기 위해
+              도입했습니다. 이 프로젝트는 사용자가 입력한 데이터들을 저장하고,
+              이를 나중에 불러와서 사용하기 때문에 자체적인 저장소 기능을
+              사용해야 했습니다.
+            </p>
+            <p>
+              LocalStorage의 경우 문자열만 저장할 수 있으며, 용량에도 제한이
+              있기 때문에 고려대상이 아니었습니다. 따라서 객체의 형태로 데이터를
+              저장할 수 있으며, 용량에도 제한이 없는 indexedDB를 사용하기로
+              마음먹었습니다.
+            </p>
+            <p>
+              프로젝트 초기에는 indexedDB를 Promise형태로 래핑한 자체적인
+              라이브러리를 제작하여 사용했습니다. 하지만 프로젝트의 규모가 점점
+              커짐에 따라 indexedDB를 전문적으로 구조화한 라이브러리의 필요성을
+              느끼게 되었고, 이에 맞는 라이브러리로 Dexie를 선택하게 되었습니다.
+            </p>
+            <p>
+              Dexie는 Promise형태로 저장소를 사용할 수 있기 때문에, 기존의
+              React환경에서 쉽게 사용할 수 있다고 판단했습니다. 또한
+              TypeScript를 지원하여 저장할 데이터의 타입을 미리 지정할 수
+              있으며, 자동으로 primary key를 제공하는 등의 기능이 제공되기
+              때문에 더욱 편리하게 사용할 수 있었습니다.
+            </p>
+          </HiddenSection>
+          <HiddenSection title="PWA" deafultOpen>
+            <p>
+              해당 애플리케이션은 서버와의 통신이 필요하지 않은 구조로
+              제작되었습니다. 즉, 인터넷에 연결되지 않은 상태에서도 해당
+              애플리케이션을 이용할 수 있어야 합니다.
+            </p>
+            <p>
+              하지만 웹 애플리케이션의 특성상 해당 웹 주소에 접속 하여
+              서버로부터 기본적인 애플리케이션의 데이터를 받아오는 과정이
+              필요했고, 이 단계에서 인터넷에 연결되어 있지 않으면 애플리케이션을
+              사용할 수 없었습니다.
+            </p>
+            <p>
+              PWA에 대해 조사를 하면서 기존에 자주 사용하던 Youtube Music과 같은
+              데스크탑 앱이 사실은 PWA로 제작되었다는 것을 알았고, 이번
+              프로젝트도 이와 마찬가지로 데스크탑 앱처럼 만들 수 있다는 것을
+              알았습니다.
+            </p>
+          </HiddenSection>
         </section>
         <section>
           <h2>개발 과정 및 배운점</h2>
@@ -327,6 +338,9 @@ export default function MapleMeister() {
           </HiddenSection>
         </section>
       </article>
+      <Link href="/portfolio" className={styles.backBtn}>
+        돌아가기
+      </Link>
     </main>
   )
 }

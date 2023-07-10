@@ -21,6 +21,10 @@
   justify-content: flex-start;
   align-items: center;
   gap: 5px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .icon {

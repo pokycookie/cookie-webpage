@@ -25,12 +25,12 @@
     }
 
     .icon {
-      width: 25px;
-      height: 25px;
+      width: min(25px, 3vw);
+      height: min(25px, 3vw);
     }
 
     p {
-      font-size: 16px;
+      font-size: min(16px, 3vw);
       font-weight: 500;
     }
   }

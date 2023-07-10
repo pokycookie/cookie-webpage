@@ -6,6 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
+  position: relative;
 
   * {
     &::-moz-selection {
@@ -26,12 +27,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 }
 
 .article {
   width: 100%;
   max-width: 1200px;
   margin-top: 100px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 0px;
+  }
 }
 
 .marqueeArea1 {

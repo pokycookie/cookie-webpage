@@ -1,7 +1,7 @@
 'use client'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from './linkCard.module.css'
+import styles from './linkCard.module.scss'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 interface IProps {

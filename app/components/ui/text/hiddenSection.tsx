@@ -23,10 +23,10 @@ export default function HiddenSection(props: IProps) {
       >
         <h3>{props.title}</h3>
         <motion.div
-          className={styles.icon}
+          className={styles.iconArea}
           animate={{ transform: isOpen ? 'rotate(180deg)' : undefined }}
         >
-          <FontAwesomeIcon icon={faChevronDown} />
+          <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />
         </motion.div>
       </div>
       <motion.div

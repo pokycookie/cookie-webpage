@@ -2,7 +2,7 @@
 
 .aboutMe {
   padding: 40px;
-  min-width: 500px;
+  position: relative;
 
   * {
     &::-moz-selection {
@@ -34,6 +34,10 @@
   p {
     margin-bottom: 15px;
   }
+
+  @media screen and (max-width: 500px) {
+    margin-top: 0px;
+  }
 }
 
 .marqueeArea1 {
@@ -42,6 +46,10 @@
   left: -50px;
   z-index: -1;
   transform: rotate(10deg);
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 }
 
 .marqueeArea2 {

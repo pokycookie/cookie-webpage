@@ -17,6 +17,18 @@
   justify-content: space-between;
   align-items: center;
 
+  @media screen and (max-width: 700px) {
+    .links {
+      display: none;
+    }
+    .menu {
+      display: block;
+    }
+    .menuArea {
+      display: block;
+    }
+  }
+
   &:hover {
     background-color: rgba($color: white, $alpha: 0.6);
     color: color.$black;
@@ -57,4 +69,41 @@
   height: 100%;
   border-bottom: 3px solid color.$white;
   pointer-events: none;
+}
+
+.menu {
+  width: 20px;
+  height: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.menuArea {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+  color: color.$white;
+  user-select: none;
+
+  // background-color: rgba(256, 256, 256, 0.1);
+  background-color: #414646;
+  backdrop-filter: blur(5px);
+
+  a {
+    width: 100%;
+    height: 50px;
+    transition: all 0.3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: color.$white;
+      color: color.$black;
+    }
+  }
 }

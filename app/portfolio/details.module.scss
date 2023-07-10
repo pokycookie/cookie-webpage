@@ -56,12 +56,22 @@
         margin-top: 15px;
       }
 
+      a,
+      ul,
       span,
       p {
         padding: 5px;
         font-size: 17px;
         font-weight: 300;
         line-height: 24px;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: underline;
       }
     }
   }

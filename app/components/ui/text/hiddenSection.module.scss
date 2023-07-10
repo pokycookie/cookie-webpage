@@ -10,9 +10,15 @@
 
     h3 {
       margin: 0;
+      font-size: min(22px, 4vw);
     }
 
-    .icon {
+    .iconArea {
+      width: min(18px, 2vw);
+
+      .icon {
+        width: 100%;
+      }
     }
   }
 

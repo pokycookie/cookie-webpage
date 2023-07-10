@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+  padding: 20px;
 
   section {
     width: 100%;
@@ -35,6 +37,10 @@
   left: -50px;
   z-index: -1;
   transform: rotate(5deg);
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
 }
 .marqueeArea2 {
   position: absolute;
@@ -42,4 +48,8 @@
   left: -50px;
   z-index: -1;
   transform: rotate(-7deg);
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
 }

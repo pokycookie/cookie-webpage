@@ -30,6 +30,12 @@
       margin: 5px 0px;
     }
 
+    h1 {
+      padding: 10px 5px;
+      font-size: max(min(36px, 5vw), 22px);
+      font-weight: 600;
+    }
+
     section {
       backdrop-filter: blur(5px);
       border-radius: 10px;
@@ -37,31 +43,35 @@
       padding: 20px;
       margin-top: 25px;
 
-      h1 {
-        padding: 10px 5px;
-        font-size: 36px;
-        font-weight: 600;
-      }
-
       h2 {
         padding: 10px 5px;
-        font-size: 28px;
+        font-size: min(28px, 5vw);
         font-weight: 500;
       }
 
       h3 {
         padding: 10px 5px;
-        font-size: 22px;
+        font-size: min(22px, 4vw);
         font-weight: 400;
         margin-top: 15px;
       }
 
+      a,
+      ul,
       span,
       p {
         padding: 5px;
-        font-size: 17px;
+        font-size: min(17px, 3vw);
         font-weight: 300;
-        line-height: 24px;
+        line-height: min(24px, 4vw);
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: underline;
       }
     }
   }
